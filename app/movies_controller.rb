@@ -29,8 +29,8 @@ def can_be_created_in_a_block(arg_hash)
   # release_date == 1990
   :title=>"Home Alone", :release_date=>1990
   Movie.create do |m|
-    m.title = :title
-    m.release_date = :release_date
+    m.title = arg_hash[:title]
+    m.release_date = arg_hash[:release_date]
   end
 end
 
